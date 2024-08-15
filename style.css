@@ -1,0 +1,375 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fafafa;
+    color: black;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+input[type="text"], input[type="url"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 2rem;
+    border-color: #555;
+}
+
+input[type="submit"] {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #eaeaea;
+    border: none;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 500;
+}
+#addWishlistBtn {
+    margin: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.dark-mode .modal-content {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dark-mode .dropdown-content {
+    background-color: #555;
+}
+
+.wishlist {
+    margin: 20px;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+}
+
+.wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    margin-top: 10px;
+    padding: 1rem;
+    position: relative;
+    background-color: #fff;
+}
+
+.item-img {
+    max-width: 220px;
+    min-width: 220px;
+    height: 220px;
+    object-fit: cover; 
+    width: 100%;
+    background-color: #aaa;
+}
+.item-details{
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.item-details p{
+    margin: 4px;
+    color:#777;
+    font-weight: 500;
+    font-size: 12px;
+}
+.item-name{
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    color: black;
+}
+b {
+    color: black;
+    font-size: 1rem;
+}
+#searchBar{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 5px;
+    border-radius: 2rem;
+    border: 1px solid #f6f6f6;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    height: 3rem;
+    outline: none;
+}
+a{
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    flex-direction: row;
+}
+
+.editItemBtn,
+.deleteItemBtn,
+.shareItemBtn {
+    position:absolute;
+    top: 10px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.editItemBtn {
+    right: 70px; /* Adjusts position for each button */
+}
+
+.deleteItemBtn {
+    right: 120px; /* Adjusts position for each button */
+}
+
+.shareItemBtn {
+    right: 10px; /* Adjusts position for each button */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background-image: url(https://cdn.discordapp.com/attachments/1233519968239485023/1266018437210177618/settings.png?ex=66a6420c&is=66a4f08c&hm=929dd83bfa3137eab669b13c3d6d98db81a3c85815d41f288c556b590a01b2b9&);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border: none;
+    padding: 4px 4px;
+    width:24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes settings-open {
+    100%{transform: rotate(180deg);}
+}
+@keyframes settings-closed {
+    100%{transform: rotate(-180deg);}
+}
+
+.settings-open {
+    animation: settings-open 800ms;
+}
+
+.settings-closed {
+    animation: settings-closed 800ms;
+}
+
+body.dark-mode .dropdown-toggle {
+    background-image: url(https://cdn.discordapp.com/attachments/1233519968239485023/1266018436988010506/settings_1.png?ex=66a6420c&is=66a4f08c&hm=ec39747f0ed9773be5e4c1f4732ea367ccce9757a89d5c521eb621490b7bf159&);
+} 
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .dropdown-menu{
+    background-color: #1e1e1e;
+}
+/*
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    align-items: center;
+}
+*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin: 0;
+    margin-right: 8px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    width: 100%;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+@media only screen and (max-width: 500px) {
+    a{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgba(84, 84, 84, 0.2);
+    border-radius: 5px;
+}
+
+/* darkmode */
+body.dark-mode .item {
+    background-color: #1e1e1e;
+}
+body.dark-mode .item-name {
+    color: white;
+}
+body.dark-mode b {
+    color: #eaeaea;
+}
+body.dark-mode .dropdown-menu h3{
+    color: #777;
+    font-weight: 500;
+}
+body.dark-mode input[type="text"]{
+    background-color: #1e1e1e;
+}
+body.dark-mode input[type="text"],
+body.dark-mode input[type="url"],
+body.dark-mode input[type="number"],
+body.dark-mode input[type="text"],
+body.dark-mode #searchBar {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+/* body.darkmode .editItemBtn,
+body.darkmode .deleteItemBtn,
+body.darkmode .shareItemBtn{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+} */

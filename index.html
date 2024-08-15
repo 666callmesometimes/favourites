@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <input type="text" id="searchBar" placeholder="Search items...">
+    <div class="dropdown">
+        <button class="dropdown-toggle"></button>
+        <div class="dropdown-menu">
+            <h3>Settings</h3>
+            <span class="dropdown-item">
+                Change theme
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </span>
+            <span class="dropdown-item">
+                Change theme
+            </span>
+            <span class="dropdown-item">
+                Lorem ipsum si dolor amet
+            </span>
+            <span class="dropdown-item">
+                <span id="shareList"><div id="shareListButton"></div>Share list</span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="wishlistContainer">
+    <!-- Wishlist Lists will be dynamically added here -->
+</div>
+
+<button id="addWishlistBtn">Add Wishlist</button>
+
+<!-- Wishlist Form Modal -->
+<div id="wishlistModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Item</h2>
+        <form id="itemForm">
+            <label for="itemName">Name:</label><br>
+            <input type="text" id="itemName" name="itemName" required><br>
+            <label for="itemLink">Link:</label><br>
+            <input type="url" id="itemLink" name="itemLink" required><br>
+            <label for="itemImage">Image URL:</label><br>
+            <input type="url" id="itemImage" name="itemImage" required><br>
+            <label for="itemPrice">Price:</label><br>
+            <input type="text" id="itemPrice" name="itemPrice" required><br>
+            <label for="itemSize">Size (optional):</label><br>
+            <input type="text" id="itemSize" name="itemSize"><br>
+            <label for="itemBatch">Batch (optional):</label><br>
+            <input type="text" id="itemBatch" name="itemBatch"><br>
+            <input type="submit" value="Add Item">
+        </form>
+    </div>
+</div>
+
+<!-- Add Wishlist Modal -->
+<div id="addWishlistModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Wishlist</h2>
+        <form id="wishlistForm">
+            <label for="wishlistName">Wishlist Name:</label><br>
+            <input type="text" id="wishlistName" name="wishlistName" required><br>
+            <input type="submit" value="Add Wishlist">
+        </form>
+    </div>
+</div>
+
+<!-- Edit Wishlist Name Modal -->
+<div id="editWishlistModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Wishlist Name</h2>
+        <form id="editWishlistForm">
+            <label for="editWishlistName">Wishlist Name:</label><br>
+            <input type="text" id="editWishlistName" name="editWishlistName" required><br>
+            <input type="submit" value="Save">
+        </form>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
