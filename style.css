@@ -112,7 +112,10 @@ button {
 .dark-mode .dropdown-content {
     background-color: #555;
 }
-
+.dropdown-menu h3{
+    color: #777;
+    font-weight: 500;
+}
 .wishlist {
     margin: 20px;
     padding: 10px;
