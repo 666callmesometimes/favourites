@@ -250,7 +250,7 @@ a{
 }
 
 .dropdown-toggle {
-    background-image: url(https://cdn.discordapp.com/attachments/1233519968239485023/1266018437210177618/settings.png?ex=66a6420c&is=66a4f08c&hm=929dd83bfa3137eab669b13c3d6d98db81a3c85815d41f288c556b590a01b2b9&);
+    background-image: url(https://cdn.discordapp.com/attachments/1233519968239485023/1273960041354891294/settings.png?ex=66c3263e&is=66c1d4be&hm=b69e4f7a61a3a3b27f6bb4a5289a21501cb303daaa24402b2c2d5d5e8db5d2f0&);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -280,7 +280,7 @@ a{
 }
 
 body.dark-mode .dropdown-toggle {
-    background-image: url(https://cdn.discordapp.com/attachments/1233519968239485023/1266018436988010506/settings_1.png?ex=66a6420c&is=66a4f08c&hm=ec39747f0ed9773be5e4c1f4732ea367ccce9757a89d5c521eb621490b7bf159&);
+    background-image: url(https://cdn.discordapp.com/attachments/1233519968239485023/1273960041019342938/settings_1.png?ex=66c3263e&is=66c1d4be&hm=e72900d1d851671990d9ae3e87ac0f069e60e2c151fbe13888670bf563c693bf&);
 } 
 
 .dropdown-menu {
