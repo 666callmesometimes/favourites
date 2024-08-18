@@ -472,4 +472,7 @@ body.darkmode .shareItemBtn{
         box-sizing: border-box;
         margin: 0;
     }
+    .dropdown-link {
+        align-items: flex-start;
+    }
 }
