@@ -389,7 +389,7 @@ body.dark-mode .dropdown-link {
 body.dark-mode b {
     color: #eaeaea;
 }
-body.dark-mode .dropdown-menu h3{
+.dropdown-menu h3{
     color: #777;
     font-weight: 500;
 }
