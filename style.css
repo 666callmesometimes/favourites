@@ -475,4 +475,17 @@ body.darkmode .shareItemBtn{
     .dropdown-link {
         align-items: flex-start;
     }
+    .wishlist-header {
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+    }
+    .item-name {
+        font-size: 2rem;
+    }
+    .wishlist-name {
+        margin: 0;
+    }
 }
